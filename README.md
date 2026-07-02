@@ -27,7 +27,7 @@ When the soil moisture drops below a predefined threshold, the microcontroller e
 * **Display:** 16x2 LCD Display (parallel interface).
 * **Actuators:** LED with a 220Ω resistor (simulating the water pump connected to Digital Pin 13).
 * **Power:** 5V power supply and connecting wires.
-* 
+  
 ---
 ## 📐 System Logic & Simulation Flow
 
@@ -61,6 +61,7 @@ To verify the control firmware, the system was thoroughly simulated using Proteu
 
 ---
 ---
+
 ## 💻 Code Structure
 
 
