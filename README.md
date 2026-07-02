@@ -50,8 +50,9 @@ The firmware manages the automated watering process by polling analog values fro
 
 ---
 ## 🔄 System States & Logic Verification
-To verify the control firmware, the system was thoroughly simulated using Proteus ISIS. The matrix below demonstrates the exact truth table of the system inputs, the resulting LCD feedback, and the actuator (LED) status:
 <br>
+To verify the control firmware, the system was thoroughly simulated using Proteus ISIS. The matrix below demonstrates the exact truth table of the system inputs, the resulting LCD feedback, and the actuator (LED) status:
+<br><br>
 | Scenario | Analog Inputs <br> `(SOIL  / TANK )` | LCD Display Status | Pump Status (LED 13) | Simulation Preview |
 | :--- | :--- | :--- | :--- | :--- |
 | **1. Soil Wet** <br> *(Water tank has water)* | `< 400` / `> 200` | "Soil: WET"<br>"STOP WATRING..." | OFF | <img src="https://github.com/user-attachments/assets/aea4960b-c6d1-4f42-9922-ec1ce80075cf" width="200"> |
