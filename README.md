@@ -59,3 +59,4 @@ The repository includes:
 3. Ensure the built-in `LiquidCrystal.h` library is included.
 4. Upload the code to your Arduino Uno board and connect the hardware according to the specified pinout tables.
 5. Alternatively, load the generated `.hex` file into your Proteus ISIS simulation.
+<br><br>
