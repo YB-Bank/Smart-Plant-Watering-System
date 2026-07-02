@@ -1,9 +1,13 @@
 # 🌱 Automatic Plant Watering System
+
 An IoT-based automated hardware and software solution designed to monitor soil moisture and manage water resources efficiently for optimal plant care.
+
 ---
 ## 📝 Project Description
+
 The **Automatic Plant Watering System** is an intelligent embedded system that uses a soil moisture sensor to detect the dryness of the soil and a water level sensor to monitor the water tank level. 
 When the soil moisture drops below a predefined threshold, the microcontroller evaluates the water availability. If sufficient water is present, the system activates the watering mechanism until the desired moisture is reached. If the tank is empty, it halts the process and alerts the user via a **16x2 LCD display**.
+
 ---
 ## ⚡ Key Features
 * **Soil Condition Monitoring:** Dynamically categorizes soil status into WET, NORMAL, or DRY based on real-time analog sensor readings.
