@@ -31,20 +31,21 @@ The firmware manages the automated watering process by polling analog values fro
    * Value between `400` and `700`: Soil is classified as **NORMAL**.
    * Value `> 700`: Soil is classified as **DRY**.
 3. **Water Level & Actuation Sequence:**
-   * If the water sensor reads `> 500` (Sufficient Water) **AND** the soil is **DRY**, the microcontroller triggers the LED (`HIGH`) to start watering.
+   * If the water sensor reads `> 200` (Sufficient Water) **AND** the soil is **DRY**, the microcontroller triggers the LED (`HIGH`) to start watering.
    * If the soil is wet/normal, the LED remains `OFF`.
-   * If the water sensor reads `< 500` (Empty Tank), the watering is aborted (LED `OFF`), and the LCD strictly overrides normal display to show "Water Tank Empty".
+   * If the water sensor reads `< 200` (Empty Tank), the watering is aborted (LED `OFF`), and the LCD strictly overrides normal display to show "Water Tank Empty".
 ---
+
 ---
 ## 🔄 System States & Logic Verification
 To verify the control firmware, the system was thoroughly simulated using Proteus ISIS. The matrix below demonstrates the exact truth table of the system inputs, the resulting LCD feedback, and the actuator (LED) status:
 
-| Scenario | Analog Inputs <br> `(SOIL A0 / TANK A1)` | LCD Display Status | Pump Status (LED 13) | Simulation Preview |
+| Scenario | Analog Inputs <br> `(SOIL  / TANK )` | LCD Display Status | Pump Status (LED 13) | Simulation Preview |
 | :--- | :--- | :--- | :--- | :--- |
-| **1. Soil Wet** <br> *(Water tank has water)* | `< 400` / `> 500` | "Soil: WET" | OFF | <img src="[INSERT_YOUR_GITHUB_IMAGE_LINK_HERE]" width="200"> |
-| **2. Soil Normal** <br> *(Water tank has water)* | `400 - 700` / `> 500` | "Soil: NORMAL" | OFF | <img src="[INSERT_YOUR_GITHUB_IMAGE_LINK_HERE]" width="200"> |
-| **3. Active Watering** <br> *(Soil is dry & water available)* | `> 700` / `> 500` | "Soil: DRY" | ON (Watering) | <img src="[INSERT_YOUR_GITHUB_IMAGE_LINK_HERE]" width="200"> |
-| **4. Error / Tank Empty** <br> *(Regardless of soil condition)* | `Any` / `< 500` | "Water Tank Empty" | OFF (Safe Mode) | <img src="[INSERT_YOUR_GITHUB_IMAGE_LINK_HERE]" width="200"> |
+| **1. Soil Wet** <br> *(Water tank has water)* | `< 400` / `> 200` | "Soil: WET"<br>"STOP WATRING..." | OFF | <img src="https://github.com/user-attachments/assets/aea4960b-c6d1-4f42-9922-ec1ce80075cf" width="200"> |
+| **2. Soil Normal** <br> *(Water tank has water)* | `400 - 700` / `> 200` | "Soil: NORMAL"<BR>"STOP WATRING..." | OFF | <img src="https://github.com/user-attachments/assets/384bb7fc-3b47-4582-877d-c10b024823ae" width="200"> |
+| **3. Active Watering** <br> *(Soil is dry & water available)* | `> 700` / `> 200` | "Soil: DRY"<BR>"WATRING.." | ON (Watering) | <img src="https://github.com/user-attachments/assets/29060522-b622-4044-b460-10a8ed172264" width="200"> |
+| **4. Error / Tank Empty** <br> *(Regardless of soil condition)* | `Any` / `< 200` | "Water Tank Empty" | OFF (Safe Mode) | <img src="https://github.com/user-attachments/assets/2330a90d-0025-4f5f-a23e-9bf1e8d2458f" width="200"><br><img src="https://github.com/user-attachments/assets/c4192769-adb4-43aa-bef1-849b5eced6c0" width="200">|
 
 ---
 ---
