@@ -57,8 +57,8 @@ To verify the control firmware, the system was thoroughly simulated using Proteu
 | :--- | :--- | :--- | :--- | :--- |
 | **1. Soil Wet** <br> *(Water tank has water)* | `< 400` / `> 200` | "Soil: WET"<br>"STOP WATRING..." | OFF | <img src="https://github.com/user-attachments/assets/aea4960b-c6d1-4f42-9922-ec1ce80075cf" width="200"> |
 | **2. Soil Normal** <br> *(Water tank has water)* | `400 - 700` / `> 200` | "Soil: NORMAL"<BR>"STOP WATRING..." | OFF | <img src="https://github.com/user-attachments/assets/384bb7fc-3b47-4582-877d-c10b024823ae" width="200"> |
-| **3. Active Watering** <br> *(Soil is dry & water available)* | `> 700` / `> 200` | "Soil: DRY"<BR>"WATRING.." | ON (Watering) | <img src="https://github.com/user-attachments/assets/29060522-b622-4044-b460-10a8ed172264" width="200"> |
-| **4. Error / Tank Empty** <br> *(Regardless of soil condition)* | `Any` / `< 200` | "Water Tank Empty" | OFF (Safe Mode) | <img src="https://github.com/user-attachments/assets/2330a90d-0025-4f5f-a23e-9bf1e8d2458f" width="200"><br><img src="https://github.com/user-attachments/assets/c4192769-adb4-43aa-bef1-849b5eced6c0" width="200">|
+| **3. Active Watering** <br> *(Soil is dry & water available)* | `> 700` / `> 200` | "Soil: DRY"<BR>"WATRING..." | ON (Watering) | <img src="https://github.com/user-attachments/assets/29060522-b622-4044-b460-10a8ed172264" width="200"> |
+| **4. Error / Tank Empty** <br> *(Regardless of soil condition)* | `Any` / `< 200` | "Tank: Empty"<br>"Fill the Tank..." | OFF (Safe Mode) | <img src="https://github.com/user-attachments/assets/2330a90d-0025-4f5f-a23e-9bf1e8d2458f" width="200"><br><img src="https://github.com/user-attachments/assets/c4192769-adb4-43aa-bef1-849b5eced6c0" width="200">|
 
 ---
 ---
